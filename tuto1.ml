@@ -5,6 +5,9 @@ open Stdlib
 
 (* Single line comment *)
 
+(* Create a exception with a parameter *)
+exception sw_error of int
+
 (* A structure *)
 type my_struct = { count : int; step: int}
 

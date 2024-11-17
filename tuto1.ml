@@ -11,19 +11,33 @@ open Stdlib
 (* A structure *)
 type sequence_action = { action: int }
 
-type failure = { time_marker: int }
-
-type my_struct = { count : int; step: int }
+(* type my_struct = { count : int; step: int } *)
 
 (* type rover = { int_map : int StringMap.empty } *)
-type rover = { obt: int; int_map : int }
+type environment = { 
+  time : int;
+  int_map : int 
+}
+
+(* The software state *)
+type sw = {
+  obt: int
+}
+
+type state = {
+  s: sw;
+  e: environment;
+  time: int
+}
 
 let step1 = { action = 1}
 let step2 = { action = 2}
 let step3 = { action = 3}
 let step4 = { action = 4}
+(*let step5 = 
+  let d = 1 in printf "D=%d\n" d;*)
 
-let tsss_sequence = [step1; step2; step3; step4] 
+let tsss_sequence = [step1] 
 
 type sgm_ram = {
   tsss_commanded_status: int;
@@ -43,18 +57,30 @@ type sgm_eeprom = {
 type sgm_eeprom = { tsss_delay: int }
 
 (** rover_create *)
-let create =
+let env_init =
   {
-    obt = 0;
+    time = 0;
     int_map = 0;
   }
 
+let sw_init =
+  {
+    obt = 0;
+  }
+
+let initial_state = {
+  s = sw_init;
+  e = env_init;
+  time = 0;
+}
+
 (** sim_start *)
-let rec sim_start x =
-  if (x.count == 10000) then { count = 0; step = x.count}
+let rec sim_start (s: state) =
+  if (s.time == 0) then s
   else 
-    sim_start { count = x.count + 1; step = 1}
+    sim_start { s with time = s.time - 1}
 
 let () = 
-  let t = sim_start { count = 0; step = 1} in
-    printf "Hello %d %d\n" t.count t.step
+  let s0 = initial_state in
+  let final_state = sim_start s0 in
+    printf "Hello %d\n" final_state.e.int_map

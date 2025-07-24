@@ -1,11 +1,13 @@
-simulation.ml
+(* simulation.ml *)
 
-create e environment
-create s system
+(* execute function *)
+let execute t e s=
+   t = t + quanta
+   t = 0 -> e s
+   t - quanta e s
 
-execute t e s
-t = t + quanta
-t = 0 -> e s
-t - quanta e s
-
-execute 100 e0 s0
+(* execute simulation for 100 s *)
+let ()=
+   let s0 = system.create()
+   let e0 = environment.create()
+   let e s = execute 100 e0 s0

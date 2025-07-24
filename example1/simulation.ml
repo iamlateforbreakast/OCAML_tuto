@@ -1,5 +1,15 @@
 (* simulation.ml *)
 
+(* simulation structure *)
+type state
+{
+   time: float
+   env: environment
+   sys: system
+}
+
+let initialise =
+
 (* execute function *)
 let execute t e s=
    t = t + quanta

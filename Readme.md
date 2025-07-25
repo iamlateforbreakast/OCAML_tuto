@@ -10,3 +10,15 @@ Add the necessary environment variable to .bashrc.
 
     eval $(opam -version)
 
+Using dune to build project
+---------------------------
+
+    dune init proj example2
+
+    cd example2
+
+    dune build
+
+    dune exec ./bin/main.exe
+
+https://ocamlverse.net/content/quickstart_ocaml_project_dune.html

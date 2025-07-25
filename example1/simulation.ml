@@ -1,23 +1,32 @@
 (* simulation.ml *)
 
 (* simulation structure *)
-type state
+type state =
 {
-   time: float
-   env: environment
-   sys: system
+   time: float;
+   quanta: float;
+   env: environment;
+   sys: system;
 }
 
-let initialise =
+(* Constructor *)
+let create() = {time=0; sys=system.create(); env=environment.create()}
 
-(* execute function *)
-let execute t e s=
-   t = t + quanta
-   t = 0 -> e s
-   t - quanta e s
+(* Printer *)
+let print() =
+   let _ = Printf.printf "Simulation:\n" in
+   let _ = Printf.printf ".time = %d\n" s.time in
+   let _ = System.print() in
+   let _ = Environment.print()
+   
+(* Execute function *)
+let rec execute t s =
+   let s1.t = s.t + s.quanta in
+   match t with
+   | t < s1.time -> s1
+   | _ -> execute (t - s1.quanta) s1
 
 (* execute simulation for 100 s *)
-let ()=
-   let s0 = system.create()
-   let e0 = environment.create()
-   let e s = execute 100 e0 s0
+let () =
+   let s0 = create() in
+   let s = execute 100 s0

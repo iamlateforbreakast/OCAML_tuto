@@ -8,7 +8,7 @@ type state =
 {
    time: float;
    quanta: float;
-   env: Environment;
+   env: Environment.t;
    sys: System;
 }
 

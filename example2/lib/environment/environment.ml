@@ -1,6 +1,6 @@
 (* environment.ml *)
 
-module Environement = struct
+module Environment = struct
   type t = { temp : float }
 
   (* Constructor *)

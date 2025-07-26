@@ -1,0 +1,38 @@
+name: Builds, tests & co
+
+on:
+  push:
+
+permissions: read-all
+
+jobs:
+  build-and-test:
+    permissions:
+      attestations: write
+      id-token: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+        ocaml-compiler:
+          - 5
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set-up OCaml
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+
+      - run: opam install . --deps-only --with-test
+
+      - run: opam exec -- dune build ./example2
+
+      - run: opam exec -- dune runtest

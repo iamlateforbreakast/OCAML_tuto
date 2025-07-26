@@ -3,13 +3,21 @@
 open Bus
 
 module Obc = struct
-   type t {pc: int}
+   type t = 
+   {
+      frequency: int;
+      pc: int
+   }
          
    (* Constructor *)
-   let create () = {pc=0}
+   let create () = 
+      {
+         frequency=10000000; 
+         pc=0
+      }
 
    (* Printer *)
 
    (* execute *)
-   let execute t s = 
+   let execute (t: float) (o: Obc.t) : Obc.t = o
 end

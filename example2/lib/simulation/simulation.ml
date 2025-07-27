@@ -29,7 +29,7 @@ let rec execute (t: float) (s: state) : state =
               quanta = s.quanta;
               sys = System.step s.quanta s.sys;
               env = Environment.step s.quanta s.env } in
-   if (t <= s1.time) then s1 else execute (t - s1.quanta) s1
+   if (t <= s1.time) then s1 else execute (t -. s1.quanta) s1
 
 (* execute simulation for 100 s *)
 let () =

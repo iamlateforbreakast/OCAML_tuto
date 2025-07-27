@@ -17,7 +17,8 @@ module System = struct
 
    (* Printer *)
    let print (s: t) =
-      Printf.printf "System:\n"
+      let _ = Printf.printf "System:\n" in
+        Obc.print s.obc
 
    (* execute *)
    let step (delta_t: float) (s: t) : t = 

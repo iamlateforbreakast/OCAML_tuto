@@ -7,7 +7,7 @@ module Bus = struct
   let create () = { temp = 25.0 }
 
   (* Printer *)
-  let print (b: Bus.t) =
+  let print (b: t) =
     let _ = Printf.printf "Bus:\n" in
     Printf.printf ".temp = %f\n" b.temp
 

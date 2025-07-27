@@ -1,8 +1,6 @@
 (* system.ml *)
 
-open Obc
-open Equipment
-open Bus
+open Example2
 
 module System = struct
    type t =

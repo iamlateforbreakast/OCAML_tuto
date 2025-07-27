@@ -12,7 +12,7 @@ module Equipment = struct
     Printf.printf ".temp = %f\n" e.temp
   
   let step (delta_t: float)(e: t) =
-    if delta_t > 10.0
+    if delta_t > 10.0 then
       {temp=e.temp}
     else
       {temp=0.0}

@@ -9,6 +9,6 @@ module Bus = struct
   (* Printer *)
   let print (b: Bus.t) =
     let _ = Printf.printf "Bus:\n" in
-    let _ = Printf.printf ".temp = %f\n" b.temp
+    Printf.printf ".temp = %f\n" b.temp
 
 end

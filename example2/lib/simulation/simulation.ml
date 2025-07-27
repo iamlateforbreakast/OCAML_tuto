@@ -21,7 +21,7 @@ let print(s:state) =
    let _ = Printf.printf ".time = %f\n" s.time in
    let _ = Printf.printf ".quanta = %f\n" s.quanta in
    let _ = System.print s.sys in
-   let _ = Environment.print s.env
+      Environment.print s.env
    
 (* Execute function *)
 let rec execute (t: float) (s: state) : state =

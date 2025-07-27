@@ -23,7 +23,7 @@ module Obc = struct
 
    (* execute *)
    let execute (delta_t: float) (o: t) : t =
-   if (delta_t > (1 / o.frequency)) then 
+   if (delta_t > (1.0 / o.frequency)) then 
      { frequency=o.frequency; pc=o.pc+1}
    else
      { frequency=o.frequency; pc=o.pc}

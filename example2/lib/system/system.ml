@@ -20,6 +20,8 @@ module System = struct
       Printf.printf "System:\n"
 
    (* execute *)
-   let step (t: float) (s: t) : System.t = 
-      {obc=Obc.step t s.obc; equipment=Equipment.step t s.equipment}
+   let step (delta_t: float) (s: t) : System.t = 
+      {obc=Obc.step delta_t s.obc;
+       equipment=Equipment.step delta_t s.equipment;
+       bus=Bus.step delta_t s.bus}
 end

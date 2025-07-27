@@ -9,6 +9,6 @@ module Environment = struct
   (* Printer *)
   let print (e: Environment.t) =
     let _ = Printf.printf "Environment:\n" in
-    let _ = Printf.printf ".temp = %f\n" e.temp
+    Printf.printf ".temp = %f\n" e.temp
 
 end

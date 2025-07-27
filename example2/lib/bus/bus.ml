@@ -14,8 +14,8 @@ module Bus = struct
   (* Step *)
   let step (delta_t: float)(b: t) : t =
     if (delta_t > 10.0) then
-      { temp: 30.0 }
+      { temp= 30.0 }
     else
-      { temp: 25.0 }
+      { temp= b.temp }
 
 end

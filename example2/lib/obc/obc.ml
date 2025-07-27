@@ -22,7 +22,10 @@ module Obc = struct
      Printf.printf ".pc=%d\n" o.pc
 
    (* execute *)
-   let execute (t: float) (o: t) : t =
+   let execute (delta_t: float) (o: t) : t =
+   if (delta_t > (1 / o.frequency)) then 
+     { frequency=o.frequency; pc=o.pc+1}
+   else
      { frequency=o.frequency; pc=o.pc}
 
 end

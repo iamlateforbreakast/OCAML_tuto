@@ -16,6 +16,6 @@ module Environment = struct
     if (delta_t > 10.0) then
       {temp=30.0}
     else
-      {temp=25.0}
+      {temp=e.temp}
 
 end

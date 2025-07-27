@@ -1,7 +1,5 @@
 (* obc.ml *)
 
-open Bus
-
 module Obc = struct
    type t = 
    {

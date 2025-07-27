@@ -7,7 +7,7 @@ module Dpu = struct
   let create () = { temp = 25.0 }
 
   (* Printer *)
-  let print (d: Dpu.t) =
+  let print (d: t) =
     let _ = Printf.printf "Dpu:\n" in
     Printf.printf ".temp = %f\n" d.temp
 

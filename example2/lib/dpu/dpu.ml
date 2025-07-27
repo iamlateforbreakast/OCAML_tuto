@@ -9,6 +9,6 @@ module Dpu = struct
   (* Printer *)
   let print (d: Dpu.t) =
     let _ = Printf.printf "Dpu:\n" in
-    let _ = Printf.printf ".temp = %f\n" d.temp
+    Printf.printf ".temp = %f\n" d.temp
 
 end

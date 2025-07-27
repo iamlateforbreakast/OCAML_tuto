@@ -5,14 +5,14 @@ open Bus
 module Obc = struct
    type t = 
    {
-      frequency: int;
+      frequency: float;
       pc: int
    }
          
    (* Constructor *)
    let create () = 
       {
-         frequency=10000000; 
+         frequency=10000000.0; 
          pc=0
       }
 

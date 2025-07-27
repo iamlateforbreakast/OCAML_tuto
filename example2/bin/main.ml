@@ -1,5 +1,5 @@
 (* main.ml *)
 
-open Simulation
+open example2
 
 let () = print_endline "Hello, World!"

@@ -17,7 +17,7 @@ module System = struct
 
    (* Printer *)
    let print (s: System.t) =
-      let _ = Printf.printf "System:\n"
+      Printf.printf "System:\n"
 
    (* execute *)
    let step (t: float) (s: System.t) : System.t = 

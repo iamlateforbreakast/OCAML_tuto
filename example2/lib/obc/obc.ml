@@ -17,7 +17,12 @@ module Obc = struct
       }
 
    (* Printer *)
+   let print (o: t) =
+     let _ = Printf.printf "Obc:\n" in
+     Printf.printf ".pc=%d\n" t.pc
 
    (* execute *)
-   let execute (t: float) (o: Obc.t) : Obc.t = o
+   let execute (t: float) (o: t) : t =
+     { frequency=o.frequency; pc=o.pc}
+
 end

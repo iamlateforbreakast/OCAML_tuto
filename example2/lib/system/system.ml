@@ -1,13 +1,11 @@
 (* system.ml *)
 
-open Example2
-
 module System = struct
    type t =
    {
-      obc: Obc.t;
-      equipment: Equipment.t;
-      bus: Bus.t
+      obc: Example2.Obc.t;
+      equipment: Example2.Equipment.t;
+      bus: Example2.Bus.t
    }
 
    (* Constructor *)

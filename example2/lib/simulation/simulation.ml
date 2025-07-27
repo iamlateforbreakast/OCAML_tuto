@@ -25,7 +25,7 @@ let print(s:state) =
    
 (* Execute function *)
 let rec execute (t: float) (s: state) : state =
-   let s1 = { time = s.time + s.quanta; 
+   let s1 = { time = s.time +. s.quanta; 
               quanta = s.quanta;
               sys = System.step s.quanta s.sys;
               env = Environment.step s.quanta s.env } in

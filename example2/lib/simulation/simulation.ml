@@ -9,7 +9,7 @@ type state =
    time: float;
    quanta: float;
    env: Environment.t;
-   sys: System;
+   sys: System.t;
 }
 
 (* Constructor *)

@@ -1,4 +1,5 @@
 (library
- (name example2_lib))
+ (name example2_lib)
+ (modules simulation system))
 
 (include_subdirs unqualified)

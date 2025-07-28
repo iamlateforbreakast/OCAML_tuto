@@ -1,4 +1,4 @@
 (library
- (name example2))
+ (name example2_lib))
 
 (include_subdirs unqualified)

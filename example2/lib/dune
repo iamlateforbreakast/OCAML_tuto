@@ -1,5 +1,6 @@
 (library
  (name example2_lib)
- (modules simulation system))
+ (modules simulation system obc dpu
+  environment equipment))
 
 (include_subdirs unqualified)

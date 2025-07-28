@@ -1,5 +1,5 @@
 (library
  (name example2_lib)
- (modules simulation system obc dpu bus))
+ (modules simulation system obc dpu bus equipment environment))
 
 (include_subdirs unqualified)

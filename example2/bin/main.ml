@@ -1,6 +1,7 @@
 (* main.ml *)
 
 open Example2_lib
+open Simulation
 
 let () = 
   let _ = print_endline "Hello, World!"in

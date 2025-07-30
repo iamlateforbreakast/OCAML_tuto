@@ -10,7 +10,7 @@ let elf_file = ref []
 let output_file = ""
 
 let spec_list =
-[("-elf", Arg.set elf_file, "elf file");
+[("-elf", Arg.set_string elf_file, "elf file");
  ("-o", Arg.set_string output_file, "output file")]
 
 let () = 

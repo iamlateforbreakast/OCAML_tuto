@@ -13,6 +13,8 @@ Add the necessary environment variable to .bashrc.
 Using dune to build project
 ---------------------------
 
+    opam install dune
+
     dune init proj example2
 
     cd example2

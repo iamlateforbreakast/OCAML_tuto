@@ -22,3 +22,10 @@ Using dune to build project
     dune exec ./bin/main.exe
 
 https://ocamlverse.net/content/quickstart_ocaml_project_dune.html
+
+Use C functions in projects:
+----------------------------
+
+    opam install ctypes ctypes-foreign
+
+    ocamlfind -list

@@ -3,9 +3,9 @@
  (name main)
  (libraries example3)
  (ctypes
-  (external_library_name libfoo)
+  (external_library_name libhello)
   (build_flags_resolver pkg_config)
-  (headers (include "foo.h"))
+  (headers (include "hello.h"))
   (type_description
    (instance Type)
    (functor Type_description))

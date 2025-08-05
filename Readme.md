@@ -1,10 +1,11 @@
-How to install OCAML on Fedora 42
+How to install OCAML on Fedora 42:
+----------------------------------
 
     sudo dnf install ocaml ocaml-findlib opam
 
 This will install the REPL tool (ocaml), the library manager, the bytecode compiler (ocamlc), the native binaries compiler (ocamlopt) and the source based package manager (opam).
 
-Add the necessary environment variable to .bashrc.
+Add the necessary environment variables to .bashrc.
 
     opam init
 
@@ -13,15 +14,15 @@ Add the necessary environment variable to .bashrc.
 Using dune to build project
 ---------------------------
 
+Dune needs to be downloaded and installed using the package manager.
+
     opam install dune
 
     dune init proj example2
 
-    cd example2
+    dune build example2
 
-    dune build
-
-    dune exec ./bin/main.exe
+    dune exec example2
 
 https://ocamlverse.net/content/quickstart_ocaml_project_dune.html
 
@@ -35,9 +36,11 @@ Use C functions in projects:
 Configure Visual Code for OCAML:
 --------------------------------
 
-install VSCode extension ocamllabs.ocaml-platform
-opam install ocaml-lsp-server ocamlformat
+Install VSCode extension ocamllabs.ocaml-platform
+
+    opam install ocaml-lsp-server ocamlformat
 
 OCaml by Examples
 -----------------
-o1-labs.github.io/ocamlbyexample/basics-utop.html
+
+Visit o1-labs.github.io/ocamlbyexample/basics-utop.html

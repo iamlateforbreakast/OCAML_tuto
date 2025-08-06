@@ -1,3 +1,17 @@
 (library
  (name example3_lib)
- (foreign_stubs (language c) (names hello1 hello2)))
+ (public_name example3)
+ (libraries ctypes ctypes.foreign)
+ (ctypes
+  (external_library_name libhello)
+  (headers (include "hello.h"))
+  (type_description
+   (instance Types)
+   (functor Type_description))
+  (function_description
+   ; Set this to sequential if the library is not thread-safe
+   (concurrency unlocked)
+   (instance Functions)
+   (functor Function_description))
+  (generated_entry_point Ctypes_entry))
+ (foreign_archives hello))

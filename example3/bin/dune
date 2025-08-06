@@ -1,17 +1,4 @@
 (executable
  (public_name example3)
  (name main)
- (libraries example3)
- (ctypes
-  (external_library_name libhello)
-  (build_flags_resolver pkg_config)
-  (headers (include "hello.h"))
-  (type_description
-   (instance Type)
-   (functor Type_description))
-  (function_description
-   (concurrency sequential)
-   (instance Functions)
-   (functor Function_description))
-  (generated_types Types_generated)
-  (generated_entry_point C)))
+ (libraries example3_lib))

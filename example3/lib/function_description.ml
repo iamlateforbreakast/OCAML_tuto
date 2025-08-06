@@ -1,14 +1,15 @@
-(* function_description.ml *)
-open Ctypes
-
+(* function_descriptions.ml *)
+open! Ctypes
 module Types = Types_generated
+
+(* Put the function definitions of the C library here *)
 
 module Functions (F : Ctypes.FOREIGN) = struct
   open F
 
-  let foo_init = foreign "foo_init" (void @-> returning int)
-
-  let foo_fnubar = foreign "foo_fnubar" (string_opt @-> returning int)
-
-  let foo_exit = foreign "foo_exit" (void @-> returning void)
+  let say_hello1 =
+    foreign "hello1" (ptr Types.Person.person @-> returning void)
+  
+  let say_hello2 =
+    foreign "hello2" ()
 end

@@ -29,6 +29,8 @@ https://ocamlverse.net/content/quickstart_ocaml_project_dune.html
 Use C functions in projects:
 ----------------------------
 
+    sudo dnf install libffi-devel
+
     opam install ctypes ctypes-foreign
 
     ocamlfind -list

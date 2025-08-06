@@ -1,7 +1,6 @@
 (library
  (name example3_lib)
- (public_name example3)
- (libraries ctypes ctypes.foreign)
+ (libraries ctypes ctypes-foreign)
  (ctypes
   (external_library_name libhello)
   (headers (include "hello.h"))
@@ -14,4 +13,4 @@
    (instance Functions)
    (functor Function_description))
   (generated_entry_point Ctypes_entry))
- (foreign_archives hello))
+ (foreign_archives ./hello))

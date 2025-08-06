@@ -7,9 +7,7 @@ module Types = Types_generated
 module Functions (F : Ctypes.FOREIGN) = struct
   open F
 
-  let say_hello1 =
-    foreign "hello1" (ptr Types.Person.person @-> returning void)
+  let say_hello1 = foreign "hello1" (string_opt @-> returning void)
   
-  let say_hello2 =
-    foreign "hello2" ()
+  let say_hello2 = foreign "hello2" (void @-> returning void)
 end

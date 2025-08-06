@@ -1,0 +1,6 @@
+(foreign_library
+  (archive_name hello)
+  (language c)
+  (enabled_if true)
+  (names hello1 hello2)
+  (include_dirs include)) 

@@ -35,6 +35,12 @@ Use C functions in projects:
 
     ocamlfind -list
 
+Use parallelism in projects:
+----------------------------
+
+    opam install domainslib
+
+
 Configure Visual Code for OCAML:
 --------------------------------
 

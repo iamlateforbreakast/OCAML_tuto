@@ -1,5 +1,5 @@
 (* fib_par2.ml *)
-let num_domains = int_of_string Sys.arv.(1)
+let num_domains = int_of_string Sys.argv.(1)
 let n = int_of_string Sys.argv.(2)
  
 let rec fib n = if n < 2 then 1 else fib (n-1) + fib (n-2)

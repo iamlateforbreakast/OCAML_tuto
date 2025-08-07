@@ -3,6 +3,12 @@
  (libraries ctypes ctypes-foreign)
  (ctypes
   (external_library_name libhello)
+  (build_flags_resolver
+   ; Change the -I to point to the directory containing your header files,
+   ; which you need for the ctypes struct definitions
+   (vendored
+    (c_flags :standard -Wall -Werror -Ihello/include)
+    (c_library_flags :standard -Wall -Werror)))
   (headers (include "hello.h"))
   (type_description
    (instance Types)
@@ -12,5 +18,6 @@
    (concurrency unlocked)
    (instance Functions)
    (functor Function_description))
-  (generated_entry_point Ctypes_entry))
- (foreign_archives ./hello))
+  (generated_types Types_generated)
+  (generated_entry_point C))
+ (foreign_archives hello))
